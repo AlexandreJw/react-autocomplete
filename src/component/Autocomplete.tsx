@@ -1,19 +1,12 @@
 import * as React from 'react';
-import { useState } from 'react';
 import "./Autocomplete.css"
 import {debounce} from '../utils/index'
-import {getSearch} from '../services/autocomplete'
-import {SearchResult, SearchItem} from '../type/AutoComplets'
-import {AxiosResponse} from 'axios'
 import { pending } from '../utils/requestList'
 import { PendingType } from '../type/axios'
 import { message } from 'antd';
-const Autocomplete = () => {
-  const [list,setList] = useState<SearchResult>([]);
+const Autocomplete = (props) => {
   const handleInputValue: { stop: Function, call: React.ChangeEventHandler<HTMLInputElement> } = debounce((e) => {
-    getSearch(e.target.value).then((data: AxiosResponse<SearchResult, any>) => {
-      setList(data.data);
-    })
+    props.api(e.target.value)
   }, 500, false)
   const handleInputValueHoc: React.ChangeEventHandler<HTMLInputElement>  = (e) => {
     e.persist()
@@ -40,19 +33,6 @@ const Autocomplete = () => {
   return (
     <div>
       <input className="myui-input" onChange={(e) => handleInputValueHoc(e)}/>
-      <p>请求的数据</p>
-      <ul>
-        {
-          list.map((item) => {
-            return (
-              <li key={item.name}>
-                <p>{`我的名字:${item.name}`}</p>
-                <p>{`我的年龄:${item.age}`}</p>
-              </li>
-            )
-          })
-        }
-      </ul>
     </div>
   )
 };

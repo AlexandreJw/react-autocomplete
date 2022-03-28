@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Autocomplete from "./component/Autocomplete";
+import APP from "./app";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Autocomplete />
+    <APP />
   </React.StrictMode>,
   document.getElementById('root')
 );

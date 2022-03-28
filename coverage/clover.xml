@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1648453502314" clover="3.2.0">
-  <project timestamp="1648453502314" name="All files">
+<coverage generated="1648453683242" clover="3.2.0">
+  <project timestamp="1648453683242" name="All files">
     <metrics statements="12" coveredstatements="8" conditionals="8" coveredconditionals="4" methods="5" coveredmethods="4" elements="25" coveredelements="16" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
     <file name="index.ts" path="/Users/dasouche/Documents/myProject/react-autocomplete/src/utils/index.ts">
       <metrics statements="12" coveredstatements="8" conditionals="8" coveredconditionals="4" methods="5" coveredmethods="4"/>
