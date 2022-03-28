@@ -16,7 +16,7 @@ export const removePending = (config: AxiosRequestConfig) => {
     const list: PendingType = pending[key];
     // 当前请求在数组中存在时执行函数体 内部处理（取消上一次请求）
     console.log(config.params.keyWords.length)
-    if (list.url === config.url && list.method === config.method || config.params.keyWords.length > 10) {
+    if (list.url === config.url && list.method === config.method) {
       console.log(list)
       // 执行取消操作
       list.cancel('操作太频繁，请稍后再试');
