@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wojiaofengzhongzhuifeng/react-component-framework.git"
+    "url": "git+https://github.com/AlexandreJw/react-autocomplete.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wojiaofengzhongzhuifeng/react-component-framework/issues"
+    "url": "https://github.com/AlexandreJw/react-autocomplete/issues"
   },
-  "homepage": "https://github.com/wojiaofengzhongzhuifeng/react-component-framework#readme",
+  "homepage": "https://github.com/AlexandreJw/react-autocomplete#readme",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
