@@ -1,6 +1,25 @@
-// const sum = require('../component/sum');
-import sum from '../component/sum';
+import { debounce } from '../utils/index';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+jest.useFakeTimers();
+
+test('debounce 执行', function() {
+  var test = jest.fn();
+  var debounced = debounce(test, 1000, false);
+
+  debounced.call();
+  debounced.call();
+  jest.runAllTimers();
+
+  expect(test)
+});
+
+test('debounce 中止', function() {
+  var test = jest.fn();
+  var debounced = debounce(test, 1000, false);
+
+  debounced.call();
+  debounced.stop();
+  jest.runAllTimers();
+
+  expect(test)
 });
